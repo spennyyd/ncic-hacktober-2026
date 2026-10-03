@@ -1,10 +1,22 @@
-import { schema, t } from 'spacetimedb/server';
-import { person } from './tables/person';
-import { classroom } from './tables/class';
+import { schema, t, table } from 'spacetimedb/server';
 
 const spacetimedb = schema({
-  person,
-  classroom
+  person: table(
+    { public: true },
+    {
+      name: t.string(),
+      classId: t.uuid()
+    },
+  ),
+  classroom: table(
+    { public: true },
+    {
+      id: t.uuid(),
+      name: t.string(),
+      year: t.string(),
+      semester: t.string(),
+    }
+  )
 });
 export default spacetimedb;
 
