@@ -1,0 +1,8 @@
+{
+  "dev": {
+    "run": "bun run dev"
+  },
+  "module-path": "./spacetimedb",
+  "database": "ncic-hacktober-2026-dl1w7",
+  "server": "maincloud"
+}
