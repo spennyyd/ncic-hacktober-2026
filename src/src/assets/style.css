@@ -1,0 +1,95 @@
+:root {
+  --ink-black: hsla(202, 85%, 8%, 1);
+  --teal: hsla(187, 32%, 41%, 1);
+  --muted-teal: hsla(169, 24%, 57%, 1);
+  --ash-grey: hsla(175, 20%, 68%, 1);
+  --vanilla-cream: hsla(43, 64%, 88%, 1);
+}
+
+@font-face {
+  font-family: "Asul-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("Asul-Regular"), url("/fonts/Asul-Regular.ttf") format("ttf")
+}
+
+.container {
+  display: flex;
+}
+
+.container-vertical { 
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+
+}
+
+.appInput {
+  padding: .5rem;
+  border: 0px;
+  margin: .1rem;
+  outline: none;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--teal);
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+

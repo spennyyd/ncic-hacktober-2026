@@ -8,9 +8,20 @@ import {
   t as __t,
   type AlgebraicTypeType as __AlgebraicTypeType,
   type Infer as __Infer,
-} from 'spacetimedb';
+} from "spacetimedb";
 
-export const Person = __t.object('Person', {
+export const Classroom = __t.object("Classroom", {
+  id: __t.u64(),
   name: __t.string(),
+  year: __t.string(),
+  semester: __t.string(),
+});
+export type Classroom = __Infer<typeof Classroom>;
+
+export const Person = __t.object("Person", {
+  id: __t.u64(),
+  name: __t.string(),
+  classroomId: __t.u64(),
 });
 export type Person = __Infer<typeof Person>;
+
